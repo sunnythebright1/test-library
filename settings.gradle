@@ -1,0 +1,3 @@
+include ':HelloWorldLibrary'
+include ':app'
+rootProject.name = "HelloWorldSdk"
