@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class CustomView extends RelativeLayout {
+public class CustomView extends RelativeLayout implements View.OnClickListener {
     public CustomView(Context context) {
         super(context);
         initialize(context);
@@ -18,12 +18,17 @@ public class CustomView extends RelativeLayout {
     }
 
     private void initialize(Context context){
+        setOnClickListener(this);
         inflate(context, R.layout.custom_layour, this);
     }
 
-    public void clicked(View view){
-        Toast.makeText(getContext(), "hi there", Toast.LENGTH_SHORT).show();
-    }
 
+
+
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(getContext(), "Hello Mr Fahad", Toast.LENGTH_SHORT).show();
+
+    }
 }
 

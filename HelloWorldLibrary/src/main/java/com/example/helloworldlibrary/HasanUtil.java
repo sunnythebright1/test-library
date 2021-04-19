@@ -13,4 +13,8 @@ public class HasanUtil {
     public String whoIsTheChamp(){
         return "Hassan";
     }
+    public interface ClickInterface{
+        void onClick();
+    }
+
 }
